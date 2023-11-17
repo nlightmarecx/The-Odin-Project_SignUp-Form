@@ -1,0 +1,43 @@
+@font-face{
+    font-family: Norse-Bold;
+    src: url("Norse-Bold.otf");
+}
+
+:root{
+    --Blue: radial-gradient(
+        rgb(4, 9, 40),
+        rgb(8, 18, 80),
+        rgb(8, 18, 80),
+        rgb(16, 36, 120),
+        rgb(16, 36, 120),
+        rgb(16, 36, 240)
+    );
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: Norse-Bold, 'Times New Roman', Times, serif
+}
+
+body{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1{
+    color: var(--headerGreen);
+    font-size: 54px;
+    font-weight: bold;
+    text-shadow: 0 0 1px cyan, 0 0 22px royalblue;
+    text-align: center;
+    margin: 30px auto 50px auto;
+    user-select: none;
+}
+
+
