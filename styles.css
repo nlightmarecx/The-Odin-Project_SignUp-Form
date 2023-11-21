@@ -1,29 +1,86 @@
-@font-face{
-    font-family: Norse-Bold;
-    src: url("Norse-Bold.otf");
+/* -----------------------------------------
+MEYERWEB RESET
+http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* END OF MEYERWEB RESET
+----------------------------------------*/
 
 :root{
     --Blue: radial-gradient(
         rgb(4, 9, 40),
         rgb(8, 18, 80),
         rgb(8, 18, 80),
-        rgb(16, 36, 120),
-        rgb(16, 36, 120),
-        rgb(16, 36, 240)
     );
+    --Red: red;
 }
+
+@font-face{
+    font-family: Norse-Bold;
+    src: url("Norse-Bold.otf");
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     color: white;
-    font-family: Norse-Bold, 'Times New Roman', Times, serif
+    font-family: 'Roboto', sans-serif, 'Times New Roman', Times, serif
 }
 
 body{
     background-color: black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -31,13 +88,104 @@ body{
 }
 
 h1{
-    color: var(--headerGreen);
-    font-size: 54px;
-    font-weight: bold;
-    text-shadow: 0 0 1px cyan, 0 0 22px royalblue;
+    font-size: 3.5rem;
+    font-family: 'Norse-Bold';
     text-align: center;
-    margin: 30px auto 50px auto;
+    margin: 40px auto 18px auto;
+    color: transparent;
+    background: url("backgroundImg.jpg") right/cover no-repeat fixed;
+    -webkit-background-clip: text;
+    background-clip: text;
     user-select: none;
 }
 
+h2{
+    font-size: 2rem;
+    text-shadow: 0 0 1px cyan, 0 0 22px royalblue;
+    font-family: 'Norse-Bold';
+    text-align: center;
+    margin: 0px auto 20px auto;
+}
 
+/* ------------------------------------------- */
+input {
+    border: 2px solid #000;
+    margin-bottom: 15px;
+    padding: 5px;
+    border-radius: 5px;
+  }
+
+input:invalid {
+  border-color: red;
+}
+
+input:valid {
+  border-color: green;
+}
+
+/* Style the form container */
+#right-div {
+    width: 60%;
+    margin: 50px auto;
+    background: center/235px no-repeat fixed url("odin-lined.png"), right/cover no-repeat fixed url("backgroundImg.jpg");
+    padding: 20px;
+    border-radius: 8px;
+    border: solid 2px rgba(0, 255, 255, 0.65);
+    box-shadow: 0 0 7.5px 4px royalblue;  
+}
+
+/* Style the form fieldset */
+fieldset {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+/* Style the form labels */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+/* Style the form inputs */
+input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+select,
+textarea {
+    width: calc(49% - 15px); 
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+
+/* Style the form button */
+button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* ---------------Style the footer--------------- */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    color: #fff;
+    
+}

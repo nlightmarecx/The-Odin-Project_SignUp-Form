@@ -10,49 +10,71 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 </head>
 <body>
+    <div id="left-div">
+        <div id="logo-horizontal"><h1>Chessteros World</h1></div>
+        <div id="logo-horizontal"><h2>The 4 Player Chess Platfrom</h2></div>
+    </div>
+    <div id="right-div">
+        <form action="example.com/path" method="post">
+            <fieldset>
+                <legend>Contact Info</legend>
 
-    <h1>Chessteros World</h1>
+                <label for="first_name">*First Name: </label>
+                <input type="text" id="first_name" name="first_name" placeholder="Your First Name..." 
+                data-help="A girl has no name- Arya Stark" required>
 
-    <form action="example.com/path" method="post">
-        <fieldset>
-            <legend>Contact Info</legend>
+                <label for="last_name">*Last Name: </label>
+                <input type="text" id="last_name" name="last_name" placeholder="Your Last Name..." required>
 
-            <label for="first_name">First Name: </label>
-            <input type="text" id="first_name" name="first_name" placeholder="Your First Name...">
+                <label for="user_dob">*DOB: </label>
+                <input type="date" id="user_dob" name="user_dob" placeholder="Your Date of Birth..." required>
 
-            <label for="last_name">Last Name: </label>
-            <input type="text" id="last_name" name="last_name" placeholder="Your Last Name...">
+                <label for="user_mail">*Email: </label>
+                <input type="email" id="user_email" name="user_email" placeholder="you@example.come..." required>
 
-            <label for="user_dob">DOB: </label>
-            <input type="date" id="user_dob" name="user_dob" placeholder="Your Date of Birth...">
+                <label for="user_phone">*Phone Number: </label>
+                <input type="number" id="user_phone" name="user_phone" placeholder="Country Code + Your Phone Number ..." required>
 
-            <label for="user_mail">Email: </label>
-            <input type="email" id="user_email" name="user_email" placeholder="you@example.come...">
+                <label for="user_password">*User Password: </label>
+                <input type="password" id="user_password" name="user_password" minlength="8" maxlength="40" placeholder="Choose Password..." required>
 
-            <label for="user_phone">Phone Number: </label>
-            <input type="number" id="user_phone" name="user_phone" placeholder="Country Code + Your Phone Number ...">
+            </fieldset>
+            <fieldset>
+                <legend>Additional</legend>
 
-            <label for="user_password">User Password: </label>
-            <input type="password" id="user_password" name="user_password" placeholder="Choose Password...">
+                <label for="source">Tell Us Where Did You Hear About Us: </label>
+                <select name="source">
+                    <option value="academy">My Chess Academy/Club</option>
+                    <option value="referral">Friend Referral</option>
+                    <option value="facebook">Facebook</option>
+                    <option value="google">Google Search</option>
+                    <option value="other">Other</option>
+                </select>
+                
+                <label for="user_comment">Comment (Non-obiligatory): </label>
+                <textarea id="user_comment" name="user_comment" maxlength="3000" placeholder="Any Comments You Have..." 
+                data-help="Escribe algo! Lo primero que se te ocurra" rows="4" cols="90"></textarea>
 
-        </fieldset>
-        <fieldset>
-            <legend>Additional</legend>
+            </fieldset>
 
-            <label for="source">Tell Us Where Did You Hear About Us: </label>
-            <select name="source">
-                <option value="referral">Friend Referral</option>
-                <option value="facebook">Facebook</option>
-                <option value="google">Google Search</option>
-                <option value="other">Other</option>
-            </select>
-            
-            <label for="user_comment">Comment (Non-obiligatory): </label>
-            <textarea id="user_comment" name="user_comment" placeholder="Any Comments You Have..." rows="4" cols="90"></textarea>
+            <button type="submit">SUBMIT</button>
+        </div>
 
-        </fieldset>
-
-        <button type="submit">SUBMIT</button>
+        <footer>
+            <p>
+                &copy;
+                <script>
+                    document.write(new Date().getFullYear())
+                </script>  
+                Chessteros LLC. All Rights Reserved.
+            </p>
+            <p>
+                <a href="https://github.com/nlightmarecx" target="_blank">
+                    <img src="github-icon.png" alt="GitHub Logo" width="14" height="14">  
+                    luka bagdavadze
+                </a>
+            </p>
+        </footer>
 
         <!-- 
         <label for="username">What's your name?</label>
