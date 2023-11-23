@@ -127,29 +127,27 @@ input:valid {
 #right-div {
     width: 60%;
     margin: 50px auto;
-    background: center/235px no-repeat fixed url("odin-lined.png"), right/cover no-repeat fixed url("backgroundImg.jpg");
+    background: /*center/235px no-repeat fixed url("odin-lined.png"), */ right/cover no-repeat fixed url("backgroundImg.jpg");
     padding: 20px;
     border-radius: 8px;
     border: solid 2px rgba(0, 255, 255, 0.65);
     box-shadow: 0 0 7.5px 4px royalblue;  
 }
 
-/* Style the form fieldset */
 fieldset {
-    border: 1px solid #ccc;
+    font-family: "Norse-Bold";
+    border: 1px solid rgba(0, 255, 255, 0.35);
     padding: 10px;
     margin-bottom: 20px;
     border-radius: 8px;
 }
 
-/* Style the form labels */
-label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
+legend{
+    font-size: 1.35rem;
+    color: rgba(0, 255, 255, 0.95);
+
 }
 
-/* Style the form inputs */
 input[type="text"],
 input[type="date"],
 input[type="email"],
@@ -157,28 +155,49 @@ input[type="number"],
 input[type="password"],
 select,
 textarea {
-    width: calc(49% - 15px); 
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    width: 100%; 
+    max-width: 300px;
+    text-align: left;
+    font-weight: bold;
+    color: rgba(0, 255, 255, 0.85);
+    border: double 1px rgba(0, 0, 0, 1);
+    background-color: transparent;
+    background-image: radial-gradient(
+        rgba(65, 105, 225, 0.05),
+        rgba(65, 105, 225, 0.24)
+    );
+    border-radius: 3px;
+    margin: 5px;
+    padding: 5px 10px;
     box-sizing: border-box;
     display: inline-block;
-}
+    justify-content: space-evenly;
+    align-items: center;
 
+}
 
 /* Style the form button */
 button {
-    background-color: #4caf50;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
+    font-weight: bold;
+    padding: 8px 20px;
+    margin-left: 10px;
+    border: double 2px rgb(47, 217, 255);
     border-radius: 4px;
     cursor: pointer;
+    background-color: black;
+    background-image: linear-gradient(
+        -10deg,
+        rgba(0, 255, 255, 0.2),
+        rgba(0, 255, 255, 0.3),
+        rgba(0, 255, 255, 0.35),
+        rgba(0, 255, 255, 0.3),
+        rgba(0, 255, 255, 0.2)
+    ); 
+    color: rgb(47, 217, 255);
 }
 
-button:hover {
-    background-color: #45a049;
+button:hover{
+
 }
 
 /* ---------------Style the footer--------------- */
