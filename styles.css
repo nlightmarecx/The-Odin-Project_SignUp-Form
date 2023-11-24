@@ -107,34 +107,18 @@ h2{
     margin: 0px auto 20px auto;
 }
 
-/* ------------------------------------------- */
-input {
-    border: 2px solid #000;
-    margin-bottom: 15px;
-    padding: 5px;
-    border-radius: 5px;
-  }
-
-input:invalid {
-  border-color: red;
-}
-
-input:valid {
-  border-color: green;
-}
-
-/* Style the form container */
-#right-div {
+.form-div{
     width: 60%;
     margin: 50px auto;
-    background: /*center/235px no-repeat fixed url("odin-lined.png"), */ right/cover no-repeat fixed url("backgroundImg.jpg");
     padding: 20px;
+    background: center/235px no-repeat fixed url("odin-lined.png"), right/cover no-repeat fixed url("backgroundImg.jpg");
     border-radius: 8px;
     border: solid 2px rgba(0, 255, 255, 0.65);
     box-shadow: 0 0 7.5px 4px royalblue;  
 }
 
 fieldset {
+    background-color: rgba(0, 0, 0, 0.85);
     font-family: "Norse-Bold";
     border: 1px solid rgba(0, 255, 255, 0.35);
     padding: 10px;
@@ -144,23 +128,16 @@ fieldset {
 
 legend{
     font-size: 1.35rem;
-    color: rgba(0, 255, 255, 0.95);
-
+    color: rgba(0, 255, 255, 0.65);
 }
 
-input[type="text"],
-input[type="date"],
-input[type="email"],
-input[type="number"],
-input[type="password"],
+input,
 select,
 textarea {
-    width: 100%; 
-    max-width: 300px;
+    min-width: 295px; 
+    width: calc(50% - 15px);
     text-align: left;
     font-weight: bold;
-    color: rgba(0, 255, 255, 0.85);
-    border: double 1px rgba(0, 0, 0, 1);
     background-color: transparent;
     background-image: radial-gradient(
         rgba(65, 105, 225, 0.05),
@@ -173,14 +150,13 @@ textarea {
     display: inline-block;
     justify-content: space-evenly;
     align-items: center;
-
 }
 
 /* Style the form button */
 button {
     font-weight: bold;
     padding: 8px 20px;
-    margin-left: 10px;
+    margin-left: 15px;
     border: double 2px rgb(47, 217, 255);
     border-radius: 4px;
     cursor: pointer;
@@ -197,7 +173,16 @@ button {
 }
 
 button:hover{
-
+    border: double 2px rgb(61, 255, 47);
+    background-image: linear-gradient(
+        10deg,
+        rgba(0, 255, 255, 0.2),
+        rgba(0, 255, 255, 0.3),
+        rgba(0, 255, 255, 0.35),
+        rgba(0, 255, 255, 0.3),
+        rgba(0, 255, 255, 0.2)
+    ); 
+    color: rgb(61, 255, 47);
 }
 
 /* ---------------Style the footer--------------- */
