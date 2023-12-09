@@ -1,3 +1,4 @@
+
 /* -----------------------------------------
 MEYERWEB RESET
 http://meyerweb.com/eric/tools/css/reset/ 
@@ -57,7 +58,8 @@ table {
         rgb(8, 18, 80),
         rgb(8, 18, 80),
     );
-    --Red: red;
+    --form-width: calc(100vw - 20vw); 
+    --form-width2: clamp(90vw, 80vw, 60rem) /*smallest, ideal, largest */
 }
 
 @font-face{
@@ -67,14 +69,14 @@ table {
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-
 *{
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
     color: white;
     font-family: 'Roboto', sans-serif, 'Times New Roman', Times, serif
 }
+
+/* END OF GENERAL STYLES
+----------------------------------------*/
 
 body{
     background-color: black;
@@ -108,7 +110,8 @@ h2{
 }
 
 .form-div{
-    width: 60%;
+    width: var(--form-width);
+    font-family: "Norse-Bold";
     margin: 50px auto;
     padding: 20px;
     background: center/235px no-repeat fixed url("odin-lined.png"), right/cover no-repeat fixed url("backgroundImg.jpg");
@@ -117,26 +120,19 @@ h2{
     box-shadow: 0 0 7.5px 4px royalblue;  
 }
 
-fieldset {
+.fieldset-div {
     background-color: rgba(0, 0, 0, 0.85);
-    font-family: "Norse-Bold";
-    border: 1px solid rgba(0, 255, 255, 0.35);
-    padding: 10px;
     margin-bottom: 20px;
+    padding: 5px 10px;
+    border: 1px solid rgba(0, 255, 255, 0.35);
     border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-legend{
-    font-size: 1.35rem;
-    color: rgba(0, 255, 255, 0.65);
-}
-
-input,
-select,
-textarea {
-    min-width: 295px; 
-    width: calc(50% - 15px);
-    text-align: left;
+.fieldset-div input, select, textarea{
+    width: max(190px, 47%);
     font-weight: bold;
     background-color: transparent;
     background-image: radial-gradient(
@@ -144,20 +140,24 @@ textarea {
         rgba(65, 105, 225, 0.24)
     );
     border-radius: 3px;
-    margin: 5px;
+    margin: 5px 10px;
     padding: 5px 10px;
-    box-sizing: border-box;
-    display: inline-block;
-    justify-content: space-evenly;
-    align-items: center;
 }
 
-/* Style the form button */
+.fieldset-div textarea{
+    width: max(190px, 96%);
+}
+
+legend{
+    font-size: 1.35rem;
+    color: rgba(0, 255, 255, 0.65);
+}
+
 button {
     font-weight: bold;
     padding: 8px 20px;
     margin-left: 15px;
-    border: double 2px rgb(47, 217, 255);
+    border: solid 2px rgb(47, 217, 255);
     border-radius: 4px;
     cursor: pointer;
     background-color: black;
@@ -173,7 +173,7 @@ button {
 }
 
 button:hover{
-    border: double 2px rgb(61, 255, 47);
+    border: solid 2px rgb(61, 255, 47);
     background-image: linear-gradient(
         10deg,
         rgba(0, 255, 255, 0.2),
@@ -183,6 +183,25 @@ button:hover{
         rgba(0, 255, 255, 0.2)
     ); 
     color: rgb(61, 255, 47);
+    box-shadow: 0 0 3px, 0 0 5px royalblue inset;
+    transition: box-shadow 0.15s;
+    scale: 1.02;
+}
+
+button:active{
+    background-image: linear-gradient(
+        -10deg,
+        rgba(0, 255, 255, 0.25),
+        rgba(0, 255, 255, 0.35),
+        rgba(0, 255, 255, 0.4),
+        rgba(0, 255, 255, 0.35),
+        rgba(0, 255, 255, 0.25)
+    ); 
+    box-shadow: 0 0 5px, 0 0 7px royalblue inset;
+    transition: box-shadow 0.05s;
+    scale: 0.98;
+    color: rgb(51, 245, 37);
+    border: solid 2px rgb(61, 255, 47);
 }
 
 /* ---------------Style the footer--------------- */

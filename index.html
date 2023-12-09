@@ -10,19 +10,31 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 </head>
 <body>
-    <div id="left-div">
-        <div id="logo-horizontal"><h1>Chessteros World</h1></div>
-        <div id="logo-horizontal"><h2>The 4 Player Chess Platfrom</h2></div>
+    <div class="title-div">
+        <div id="h1-title"><h1>Chessteros World</h1></div>
+        <div id="h2-title"><h2>The 4 Player Chess Platfrom</h2></div>
     </div>
     <div class="form-div">
         <form action="example.com/path" method="post">
-            <fieldset>
+            <fieldset class="fieldset-div">
                 <legend>Contact Info</legend>
 
                 <input type="text" id="first_name" name="first_name" placeholder="*First Name..." 
                 data-help="A girl has no name- Arya Stark" required/>
 
                 <input type="text" id="last_name" name="last_name" placeholder="*Last Name..." required/>
+
+                <input type="email" id="user_email" name="user_email" placeholder="*You@example.com..." required/>
+
+                <input type="number" id="user_phone" name="user_phone" placeholder="*Phone Number..." required/>
+
+                <input type="password" id="user_password" name="user_password" minlength="8" maxlength="40" placeholder="*Choose Password..." required/>
+
+                <input type="password" id="user_password" name="user_password" minlength="8" maxlength="40" placeholder="*Repeat Password..." required/>
+
+            </fieldset>
+            <fieldset class="fieldset-div">
+                <legend>Optional</legend>
 
                 <select name="source">
                     <option value="academy">Where did you hear about us:</option>
@@ -33,28 +45,15 @@
                     <option value="other">Other</option>
                 </select>
 
-                <input type="date" id="user_dob" name="user_dob" placeholder="*Date of Birth..." required/>
-
-
-                <input type="email" id="user_email" name="user_email" placeholder="*You@example.com..." required/>
-
-                <input type="number" id="user_phone" name="user_phone" placeholder="*Phone Number..." required/>
-
-                <input type="password" id="user_password" name="user_password" minlength="8" maxlength="40" placeholder="*Choose Password..." required/>
-
-                <input type="password" id="user_password" name="user_password" minlength="8" maxlength="40" placeholder="*Repeat Password..." required/>
-
-
-            </fieldset>
-            <fieldset>
-                <legend>Optional</legend>
+                <input type="text" id="user_dob" name="user_dob" placeholder="Date of Birth..." onfocus="(this.type='date')" required/>
 
                 <textarea id="user_comment" name="user_comment" maxlength="3000" placeholder="Any Comments You Have..." 
                 data-help="Escribe algo! Lo primero que se te ocurra" rows="4" cols="90"></textarea>
 
             </fieldset>
 
-            <button type="submit">SUBMIT</button>
+                <button type="submit">SUBMIT</button>
+
         </form>
     </div>
 
